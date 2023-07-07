@@ -1,3 +1,12 @@
+# Custom Zesty.io integration Example for React
+
+This is a vanilla create react app which installs 2 zesty.io packages to connect content and run the layouts app.
+
+```
+npm install @zesty-io/webengine-json
+npm install @zesty-io/react-autolayout
+```
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
