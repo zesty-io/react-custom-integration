@@ -1,9 +1,11 @@
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+// zesty specific packages
 import { toJSON } from '@zesty-io/webengine-json';
-import ZestyConfig from "./zesty.config.json";
-import React from 'react';
 import { AutoLayout } from "@zesty-io/react-autolayout";
+// zesty config, these could be optional configred in your env
+import ZestyConfig from "./zesty.config.json";
 
 function App() {
   // setup state to capture content
@@ -13,7 +15,7 @@ function App() {
   React.useEffect(() => {
     const fetchData = async () => {
       // this example has a hard coded path, window.location.pathname 
-      // will get you 
+      // if your instance uses a password, store it in a .env file and pass it as the third parameter in the toJSON() function 
       
       const data = await toJSON(ZestyConfig.stage,'about/');
       console.log(data)
