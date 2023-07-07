@@ -16,9 +16,7 @@ function App() {
     const fetchData = async () => {
       // this example has a hard coded path, window.location.pathname 
       // if your instance uses a password, store it in a .env file and pass it as the third parameter in the toJSON() function 
-      
       const data = await toJSON(ZestyConfig.stage,'about/');
-      console.log(data)
       setContent(data);
     }
     fetchData();
@@ -36,8 +34,8 @@ function App() {
         </p>
        
       </header>
-      {/** layouts example */}
-      {content && <AutoLayout content={content} />}
+      {/** layouts example (optional) */}
+      {content?.meta?.layout?.json && <AutoLayout content={content} />}
     </div>
   );
 }
